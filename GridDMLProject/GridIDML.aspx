@@ -36,8 +36,8 @@ ShowFooter="true" HeaderStyle-Font-Bold="true" HeaderStyle-ForeColor="White" >
 <asp:Button ID ="imgbtnCancel" runat="server" CommandName="Cancel" ToolTip="Cancel" Text="Cancel" />
 </EditItemTemplate>
   <ItemTemplate>              
-      <asp:Button ID="imgbtnEdit" CommandName="Edit" runat="server" Text="Edit" ToolTip="Edit"  />
-      <asp:Button ID="imgbtnDelete" CommandName="Delete" Text="Delete" runat="server"  ToolTip="Delete" />
+      <asp:Button ID="imgbtnEdit" CommandName="Edit" runat="server" Text="Edit" ToolTip="Edit"   />
+      <asp:Button ID="imgbtnDelete" CommandName="Delete" Text="Delete" runat="server"  ToolTip="Delete" OnClientClick="return confirm('Are you sure')" />
    </ItemTemplate>
  <FooterTemplate>
  <asp:Button ID="imgbtnAdd" runat="server" CommandName="AddNew"  Text="Add New user" ToolTip="Add new User" ValidationGroup="validaiton" />
@@ -102,6 +102,8 @@ ShowFooter="true" HeaderStyle-Font-Bold="true" HeaderStyle-ForeColor="White" >
 
 </asp:TemplateField>
             </Columns>
+
+            <FooterStyle Wrap="False" />
 
 <HeaderStyle BackColor="#61A6F8" Font-Bold="True" ForeColor="White"></HeaderStyle>
         </asp:GridView>

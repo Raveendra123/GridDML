@@ -115,16 +115,17 @@ namespace GridDMLProject
         {
             int userid = Convert.ToInt32(gvDetails.DataKeys[e.RowIndex].Value.ToString());
             string username = gvDetails.DataKeys[e.RowIndex].Values["UserName"].ToString();
+            Response.Write(userid + username);
             int n = obj.Delete(userid);
 
-            if (n>0)
+            if (n > 0)
             {
                 BindEmployeeDetails();
                 lblresult.ForeColor = System.Drawing.Color.Red;
                 lblresult.Text = username + " Details Deleted  successfully";
 
             }
-           
+
 
         }
         protected void gvDetails_RowCommand(object sender, GridViewCommandEventArgs e)
