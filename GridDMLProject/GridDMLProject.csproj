@@ -81,6 +81,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -198,9 +200,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="ChartSite.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="DetailListView.aspx" />
+    <Content Include="DrpXMLSerilization.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -209,10 +214,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="inventry.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>inventry.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="GridCheckbox.aspx" />
     <Content Include="GridDmlDemo.aspx" />
     <Content Include="GridIDML.aspx" />
+    <Content Include="LinqtoObject.aspx" />
+    <Content Include="LinqtoSql.aspx" />
+    <Content Include="LinqToXML.aspx" />
+    <Content Include="News.xml" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -376,7 +390,36 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ChartSite.aspx.cs">
+      <DependentUpon>ChartSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartSite.aspx.designer.cs">
+      <DependentUpon>ChartSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inventry.cs">
+      <DependentUpon>inventry.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="inventry.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventry.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataLayer.cs" />
+    <Compile Include="DetailListView.aspx.cs">
+      <DependentUpon>DetailListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailListView.aspx.designer.cs">
+      <DependentUpon>DetailListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrpXMLSerilization.aspx.cs">
+      <DependentUpon>DrpXMLSerilization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrpXMLSerilization.aspx.designer.cs">
+      <DependentUpon>DrpXMLSerilization.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -401,7 +444,29 @@
     <Compile Include="GridIDML.aspx.designer.cs">
       <DependentUpon>GridIDML.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LinqtoObject.aspx.cs">
+      <DependentUpon>LinqtoObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqtoObject.aspx.designer.cs">
+      <DependentUpon>LinqtoObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqtoSql.aspx.cs">
+      <DependentUpon>LinqtoSql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqtoSql.aspx.designer.cs">
+      <DependentUpon>LinqtoSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqToXML.aspx.cs">
+      <DependentUpon>LinqToXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqToXML.aspx.designer.cs">
+      <DependentUpon>LinqToXML.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -414,6 +479,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="inventry.dbml.layout">
+      <DependentUpon>inventry.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

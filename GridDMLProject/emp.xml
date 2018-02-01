@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Employee" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Employee">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmpCode" type="xs:int" minOccurs="0" />
+                <xs:element name="deptno" type="xs:int" minOccurs="0" />
+                <xs:element name="EmployeeName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Employee>
+    <EmpCode>101</EmpCode>
+    <deptno>10</deptno>
+    <EmployeeName>Raveendra</EmployeeName>
+  </Employee>
+  <Employee>
+    <EmpCode>102</EmpCode>
+    <deptno>20</deptno>
+    <EmployeeName>Rajendra</EmployeeName>
+  </Employee>
+  <Employee>
+    <EmpCode>103</EmpCode>
+    <deptno>30</deptno>
+    <EmployeeName>Ramu</EmployeeName>
+  </Employee>
+  <Employee>
+    <EmpCode>104</EmpCode>
+    <deptno>40</deptno>
+    <EmployeeName>Mokshith</EmployeeName>
+  </Employee>
+  <Employee>
+    <EmpCode>105</EmpCode>
+    <deptno>50</deptno>
+    <EmployeeName>Kavya</EmployeeName>
+  </Employee>
+</NewDataSet>
