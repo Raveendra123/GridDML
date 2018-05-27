@@ -10,7 +10,7 @@ namespace GridDMLProject
   
     public class DataLayer
     {
-        SqlConnection con = new SqlConnection("Data Source=MININT-8DSL3GL;Initial Catalog=Details;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Server=tcp:cloudsqlsrvr.database.windows.net,1433;Initial Catalog=Details;Persist Security Info=False;User ID=raveendra;Password=June@2018;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
        public DataSet Getdata()
         {
             
