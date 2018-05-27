@@ -29,7 +29,7 @@ color:black;
 ShowFooter="true" HeaderStyle-Font-Bold="true" HeaderStyle-ForeColor="White" >
             <Columns>
                 
-                <asp:TemplateField>
+                <asp:TemplateField HeaderText="Edit/Delete">
 
                     <EditItemTemplate>
 <asp:Button ID ="imgbtnUpdate" runat="server" CommandName="Update" ToolTip="Update" Text="Update"  />
